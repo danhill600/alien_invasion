@@ -29,3 +29,12 @@ for name in sorted(favorite_languages.keys()):
 print("The following languages have been mentioned:")
 for language in set(favorite_languages.values()):
     print(language.title())
+
+should_take=['jesse','lord kromdor','jen','barton','phil','mr. matches']
+
+for i in should_take:
+    if i in favorite_languages.keys():
+        print("Thanks for responding, " + i.title() + ".")
+    else:
+        print("Please take the poll, " + i.title() + ".")
+
