@@ -32,6 +32,8 @@ my_restaurant.open_restaurant()
 
 second_restaurant = Restaurant("spaghetti shop", "italian")
 third_restaurant = Restaurant("maize", "mexican")
+fourth_restaurant = Restaurant("Desta", "Ethiopian")
 
 second_restaurant.describe_restaurant()
 third_restaurant.describe_restaurant()
+fourth_restaurant.describe_restaurant()
