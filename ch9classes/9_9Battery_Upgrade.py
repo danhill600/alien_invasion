@@ -1,4 +1,10 @@
-"""A class that can be used to represent a car"""
+#9-9. Battery Upgrade: Use the final version of electric_car.py from this section.
+#Add a method to the Battery class called upgrade_battery() . This method
+#should check the battery size and set the capacity to 85 if it isn’t already.
+#Make an electric car with a default battery size, call get_range() once, and
+#then call get_range() a second time after upgrading the battery. You should
+#see an increase in the car’s range.
+
 
 class Car():
     """A simple attempt to represent a car."""
@@ -53,6 +59,10 @@ class Battery():
         message += " miles on a full charge."
         print(message)
 
+    def upgrade_battery(self):
+        if self.battery_size != 85:
+            self.battery_size = 85
+
 class ElectricCar(Car):
     """represents aspects of a car, specific to electric vehicles"""
 
@@ -60,3 +70,11 @@ class ElectricCar(Car):
         """Initialize attributes of the parent class."""
         super().__init__(make, model, year)
         self.battery = Battery()
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+my_tesla.battery.upgrade_battery()
+my_tesla.battery.get_range()
